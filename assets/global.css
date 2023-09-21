@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fancy-underline {
+  position: relative;
+}
+
+.fancy-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  border-radius: 5px;
+  height: 0.05em;
+  bottom: 0;
+  left: 0;
+  background: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.15s ease-in-out;
+}
+
+.fancy-underline:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+

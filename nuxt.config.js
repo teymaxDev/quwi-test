@@ -38,6 +38,9 @@ export default {
       lang: 'en'
     }
   },
+  server: {
+    port: process.env.PORT || 3000,
+  },
   build: {
   },
   privateRuntimeConfig: {

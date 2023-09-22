@@ -33,6 +33,9 @@ export default {
     '@nuxtjs/pwa',
     'cookie-universal-nuxt'
   ],
+  server: {
+    port: process.env.PORT || 3000,
+  },
   pwa: {
     manifest: {
       lang: 'en'
